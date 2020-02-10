@@ -1,0 +1,9 @@
+/node_modules/
+/.vscode/
+/dist/
+webpack.config.js
+.babelrc
+package.json
+App.js
+index.html
+index.js
