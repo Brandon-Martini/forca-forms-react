@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class TextBox extends Component {
+export class DateBox extends Component {
   constructor() {
     super();
 
@@ -12,8 +12,32 @@ export class TextBox extends Component {
 
   handleChange = e => {
     var { value, displayError } = this.state;
+    var valueLength = value.length;
+    var target = e.target.value;
+    var numbersAndDashes = target.match("^[0-9-]*$");
+    var targetLength = target.length;
+    var lastChar = target.charAt(targetLength - 1);
+    
     displayError = false;
-    value = e.target.value;
+    
+    //Add a dash after month and day.
+    if (valueLength < targetLength &&
+        (targetLength === 2 ||
+        targetLength === 5)) {
+      target += '-';
+    }
+    
+    //Assures only numbers and dashes are displayed.
+    //And length cannot be greater than 11-11-1111.
+    if (numbersAndDashes && 
+        targetLength < 11) {
+      value = target;
+    }
+
+    //Assures users cannot enter dashes.
+    if (lastChar === '-') {
+      value = value.substring(0, valueLength);
+    } 
     this.setState({ value, displayError });
   };
 
