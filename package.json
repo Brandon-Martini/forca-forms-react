@@ -1,0 +1,51 @@
+{
+  "name": "forca-forms-react",
+  "version": "0.0.1pa",
+  "description": "A simple forms library with popular inputs for react.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandon-Martini/forca-forms-react.git"
+  },
+  "keywords": [
+    "react",
+    "forca",
+    "forms",
+    "github",
+    "npm",
+    "node"
+  ],
+  "author": "Brandon Martini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brandon-Martini/forca-forms-react/issues"
+  },
+  "homepage": "https://github.com/Brandon-Martini/forca-forms-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
